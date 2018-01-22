@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TrainSchedule</title>
+    <!-- linking style.css external page -->
+    <link rel="stylesheet" href="assests/css/style.css">
+    <!-- linking bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <!-- linking jQuery CDN  -->
+
+    <!-- link to firebase database  -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <!-- link to moment.js  -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+  </head>
+
+
+  <body>
+
+    <div class="jumbotron text-center"id="title">
+      <h1 class="display-4">Anytime is Train Time</h1>
+        <h3>Choo Choo. Chee Chee </h3>
+    </div>
+
+    <table class="table text-center">
+        <thead>
+          <tr id="TrainScheduler">
+            <th scope="col" id="train-display">Train Name</th>
+            <th scope="col" id="destination-display">Destination</th>
+            <th scope="col" id="frequency-display">Frequency(min)</th>
+            <th scope="col" id="nextArrival-display">Next Arrival</th>
+            <th scope="col" id="minutesAway-display ">Minutes Away</th>
+          </tr>
+
+          <tbody id="TrainSchedule">
+           </tbody>
+
+        </thead>
+    </table>
+
+    <form>
+      <div class="form-group">
+        <label for="validationCustom05">Train Name</label>
+        <input type="text" class="form-control" id="train-input" placeholder="Train Name" required>
+        <div class="invalid-feedback">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="validationCustom05">Destination</label>
+        <input type="text" class="form-control" id="destination-input" placeholder="destination" required>
+        <div class="invalid-feedback">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="validationCustom05">First Train Time (HH:mm - Military time)</label>
+        <input type="number" class="form-control" id="firstTrain-input" placeholder="first train time" required>
+        <div class="invalid-feedback">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="validationCustom05">Frequency(min)</label>
+        <input type="number" class="form-control" id="frequency-input" placeholder="time between trains" required>
+        <div class="invalid-feedback">
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="submit" id="add_train_btn">Submit</button>
+
+    </form>
+
+    <!-- linking external js page -->
+    <script src="assests/javascript/app.js" charset="utf-8"></script>
+  </body>
+</html>

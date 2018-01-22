@@ -1,0 +1,14 @@
+/* testing if stylesheet connected /*/
+/*body{
+  background-color: red;
+}*/
+
+#title{
+  background-color: brown;
+  color: white;
+}
+
+#table{
+  background-color: blue;
+  color: white;
+}
